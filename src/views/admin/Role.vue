@@ -1,13 +1,10 @@
 <template>
-  <div>
-    123
-  </div>
+  <div>12333</div>
 </template>
 
 <script>
 export default {
-  name: "Index",
-  setup() {}
+  name: "vueName"
 };
 </script>
 

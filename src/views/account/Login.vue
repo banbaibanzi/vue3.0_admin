@@ -33,8 +33,7 @@
 
 <script>
 import { reactive, toRefs } from "vue";
-import { defineComponent } from "vue";
-export default defineComponent({
+export default {
   name: "Login",
   setup() {
     const formConfig = reactive({
@@ -46,7 +45,7 @@ export default defineComponent({
     const data = toRefs(formConfig);
     return { ...data };
   }
-});
+};
 </script>
 
 <style lang="scss" scoped>

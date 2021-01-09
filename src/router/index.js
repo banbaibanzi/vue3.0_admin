@@ -4,25 +4,53 @@ const routes = [
   {
     path: "/",
     name: "Login",
+    hidden: true,
+    meta: { title: "登录" },
     component: () => import("../views/account/Login.vue")
   },
   // 注册
   {
     path: "/register",
     name: "Register",
+    hidden: true,
+    meta: { title: "注册" },
     component: () => import("../views/account/Register.vue")
   },
   // 忘记密码
   {
     path: "/forget",
     name: "Forget",
+    hidden: true,
+    meta: { title: "忘记密码" },
     component: () => import("../views/account/Forget.vue")
   },
-  // 首页
+  // 管理后台 - 首页
   {
     path: "/index",
     name: "Index",
-    component: () => import("../views/home")
+    meta: { title: "首页" },
+    component: () => import("../views/layout")
+  },
+  // 管理后台 - 管理总台
+  {
+    path: "/adminIndex",
+    name: "AdminIndex",
+    meta: { title: "管理总台" },
+    component: () => import("../views/layout"),
+    children: [
+      {
+        path: "/role",
+        name: "Role",
+        meta: { title: "角色管理" },
+        component: () => import("../views/admin/Role.vue")
+      },
+      {
+        path: "/user",
+        name: "User",
+        meta: { title: "用户管理" },
+        component: () => import("../views/admin/User.vue")
+      }
+    ]
   }
 ];
 

@@ -71,7 +71,7 @@
         </a-form-item>
       </a-form>
       <div class="fs_12">
-        <router-link to="/forget" class="color_white">登录</router-link> |
+        <router-link to="/" class="color_white">登录</router-link> |
         <router-link to="/register" class="color_white">注册</router-link>
       </div>
     </div>
@@ -88,9 +88,7 @@ import {
   checkCode as code
 } from "@/utils/validation";
 import { reactive, toRefs } from "vue";
-import { defineComponent } from "vue";
-import { clearInterval } from "timers";
-export default defineComponent({
+export default {
   name: "Login",
   setup() {
     /** 校验用户名 */
@@ -194,7 +192,7 @@ export default defineComponent({
     };
     return { ...form, ...data, handleFinish, getCode };
   }
-});
+};
 </script>
 
 <style lang="scss" scoped>

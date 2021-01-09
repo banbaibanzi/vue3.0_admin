@@ -1,13 +1,10 @@
 <template>
-  <div>
-    123
-  </div>
+  <div>信息管理</div>
 </template>
 
 <script>
 export default {
-  name: "Index",
-  setup() {}
+  name: "NewsIndex"
 };
 </script>
 
