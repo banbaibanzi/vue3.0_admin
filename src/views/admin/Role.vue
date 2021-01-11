@@ -1,10 +1,10 @@
 <template>
-  <div>12333</div>
+  <div>角色管理</div>
 </template>
 
 <script>
 export default {
-  name: "vueName"
+  name: "Role"
 };
 </script>
 
